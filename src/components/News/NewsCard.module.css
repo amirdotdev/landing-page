@@ -1,0 +1,27 @@
+.container {
+  max-width: 325px;
+}
+
+.card-content {
+  background: #0877bd;
+}
+
+.title {
+  font-family: 'IRANSans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: right;
+  color: #ffffff;
+}
+
+.text {
+  font-family: 'IRANSans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: right;
+  color: #ffffff;
+}

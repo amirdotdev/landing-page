@@ -1,0 +1,99 @@
+.container {
+  height: 1000px;
+  /* background-color: rgb(187, 187, 187); */
+  padding-top: 67px;
+}
+
+.grid-container {
+  flex-direction: row-reverse;
+}
+
+.title {
+  padding-top: 22px;
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 63px;
+  text-align: right;
+  color: #16255b;
+}
+
+.text-container {
+  background: #ffffff;
+  border: 5px solid #f7c906;
+  border-radius: 50px 50px 0px 50px;
+  padding: 43px 74px 53px;
+  position: relative;
+  z-index: -2;
+}
+
+.text {
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: justify;
+  color: #16255b;
+}
+
+.video-container {
+  position: relative;
+  left: 422px;
+  top: -1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../assets/Interduction/man.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  min-height: 421px;
+  max-width: 819px;
+}
+
+/* .standing-man-img-container {
+  position: absolute;
+  background-image: url('../../assets/Interduction/standing-man.png');
+  min-height: 706px;
+  min-width: 463px;
+  top: 0px;
+  left: 0px;
+} */
+
+.standing-man-img-container img {
+  position: relative;
+  top: -268px;
+  left: -77px;
+  z-index: -1;
+}
+@media only screen and (max-width: 1200px) {
+  .grid-container {
+    justify-content: center;
+  }
+  .title {
+    text-align: center;
+  }
+  .video-container {
+    position: static;
+    margin: 50px auto 0;
+  }
+  .standing-man-img-container,
+  .standing-man-img-container img {
+    position: static;
+    display: none;
+    height: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .container {
+    height: 1150px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .container {
+    height: 1300px;
+  }
+}

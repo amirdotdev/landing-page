@@ -1,0 +1,40 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  z-index: 200;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.link {
+  text-decoration: none;
+}
+.text {
+  font-family: 'IRANSans', sans-serif;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.text:hover {
+  color: black;
+}
+
+.icon {
+  font-size: 4rem;
+  color: #289eec;
+  align-self: flex-start;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 789px) {
+  .container {
+    display: none;
+  }
+}

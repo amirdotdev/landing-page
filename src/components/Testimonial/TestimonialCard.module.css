@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-basis: 22.5%;
+  position: relative;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  position: relative;
+  top: 25px;
+  left: 6px;
+}
+
+.card-content {
+  background: #ffffff;
+  border-radius: 20px 0px 20px 20px;
+  padding: 20px 13px 20px 15px;
+}
+
+.name {
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: right;
+  color: #063775;
+}
+
+.job-title {
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 32px;
+  text-align: right;
+  color: rgba(6, 55, 117, 0.7);
+}
+
+.comment {
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: right;
+  color: #063775;
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    flex-basis: 70%;
+    align-items: center;
+  }
+  .name,
+  .job-title,
+  .comment {
+    text-align: center;
+  }
+}

@@ -1,0 +1,54 @@
+.container {
+  padding-top: 46px;
+  background: #e7f2f9;
+}
+
+.title {
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 47px;
+  text-align: center;
+  color: #16255b;
+}
+
+.logos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 99px;
+  padding-right: 99px;
+}
+
+.logos {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 12px;
+  }
+  .logos-container {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+  .logos-container {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+@media only screen and (max-width: 460px) {
+  html {
+    font-size: 8px;
+  }
+  .logos-container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}

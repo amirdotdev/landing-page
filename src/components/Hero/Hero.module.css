@@ -1,0 +1,139 @@
+.container {
+  width: 100%;
+  margin-left: auto;
+  /* padding-top: 50px; */
+  box-sizing: border-box;
+  margin-right: auto;
+  display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+  flex-grow: 1;
+}
+
+.grid-container {
+  flex-direction: row-reverse;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.image-container {
+  position: relative;
+  /* height: 100%; */
+}
+
+.circle-container {
+  /* height: 100%; */
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -30px;
+  z-index: -1;
+}
+
+.circle-img {
+  height: 100%;
+}
+
+.content-container {
+  align-items: flex-end;
+  padding-top: 75px;
+}
+
+.title {
+  font-family: 'IRANSans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 55px;
+  text-align: right;
+  color: #16255b;
+}
+
+.content {
+  /* max-width: 430px; */
+  margin-top: 28px;
+  gap: 150px;
+}
+
+.subtitle {
+  max-width: 419px;
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: justify;
+  color: #0877bd;
+}
+
+.button-container {
+  flex-direction: row-reverse;
+  gap: 30px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 48px;
+  border-radius: 20px 20px 0px 20px;
+}
+
+.button-text {
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 31px;
+  text-align: center;
+}
+
+.button-gold {
+  background: #f7c906;
+  color: #16255b;
+}
+.button-grey {
+  background: #d4d4d4;
+  color: #0877bd;
+}
+
+@media only screen and (max-width: 900px) {
+  .content-container {
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+  }
+  .title {
+    text-align: center;
+  }
+  .button-text {
+    font-size: 1.2rem;
+  }
+  .content {
+    gap: 24px;
+  }
+  .button-container {
+    justify-content: center;
+    align-items: center;
+  }
+  .button {
+    padding: 8px 24px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .subtitle {
+    text-align: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}

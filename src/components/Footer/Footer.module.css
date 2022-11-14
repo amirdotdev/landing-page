@@ -1,0 +1,95 @@
+.container {
+  /* background-color: #f5f5f5; */
+  padding-top: 56px;
+  padding-bottom: 33px;
+  box-shadow: 0px -4px 20px rgba(6, 55, 117, 0.2);
+  border-radius: 114px 0px 0px 0px;
+}
+
+.logo_container {
+  justify-content: flex-end;
+  margin-bottom: 32px;
+}
+
+.content {
+  flex-direction: row-reverse;
+  text-align: right;
+  gap: 34px;
+}
+
+.about_us_container {
+  margin-left: 187px;
+}
+
+.title,
+.about_us_text {
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 29px;
+  color: #16255b;
+  margin-bottom: 24px;
+}
+
+.about_us_text {
+  color: #0877bd;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.links_container {
+  max-width: 292px;
+}
+
+.link {
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: right;
+  color: #0877bd;
+}
+
+.address_container {
+  max-width: 302px;
+}
+
+.address {
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: right;
+  color: #0877bd;
+}
+
+.icons_container {
+  flex-direction: row;
+  gap: 29px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .logo_container {
+    justify-content: center;
+  }
+  .about_us_container {
+    margin-left: 0;
+  }
+  .about_us_title,
+  .about_us_text {
+    text-align: center;
+  }
+}
