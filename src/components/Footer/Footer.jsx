@@ -27,6 +27,7 @@ const {
   link,
   address_container,
   address,
+  street,
   icons_container,
   icon,
 } = styles
@@ -69,7 +70,7 @@ const Footer = () => {
             </Grid>
             <Grid item className={address_container} xs={12} sm={6} md>
               <Typography className={title}>تماس با ما</Typography>
-              <Typography className={address}>
+              <Typography className={`${address} ${street}`}>
                 نشانی ما : تهران - خیابان فاطمی غربی - تقاطع سیندخت شماره 232
               </Typography>
               <Typography className={address}>

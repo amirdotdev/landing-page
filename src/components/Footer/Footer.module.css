@@ -51,6 +51,7 @@
   line-height: 50px;
   text-align: right;
   color: #0877bd;
+  cursor: pointer;
 }
 
 .address_container {
@@ -65,6 +66,10 @@
   line-height: 50px;
   text-align: right;
   color: #0877bd;
+}
+
+.street {
+  line-height: 30px;
 }
 
 .icons_container {
