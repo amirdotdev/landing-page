@@ -6,11 +6,42 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Stack from '@mui/material/Stack'
 import CustomContainer from '../../custom-styled-components/CustomContainer'
-import manImage from '../../assets/favors/man.png'
-import circleImage from '../../assets/favors/circle.png'
-import chartImage from '../../assets/favors/chart.png'
 import image from '../../assets/favors/image.png'
+import { animated, useSpring } from '@react-spring/web'
+import { useEffect, useState, useRef } from 'react'
+
 const Favors = () => {
+  const [scrollFromTop, setScrollFromTop] = useState(null)
+  const myRef = useRef(null)
+  const [springs, animation] = useSpring(() => ({
+    from: { x: 100, opacity: 0 },
+    config: {
+      mass: 4,
+      friction: 80,
+      tension: 120,
+    },
+  }))
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setScrollFromTop(document.documentElement.scrollTop)
+    })
+
+    if (
+      scrollFromTop >= myRef.current.offsetTop - 300 &&
+      scrollFromTop <= myRef.current.offsetTop + 700
+    ) {
+      animation.start({
+        to: { x: 0, opacity: 1 },
+      })
+    }
+
+    return () => {
+      window.removeEventListener('scroll', () => console.log('removing event'))
+    }
+  }, [animation, scrollFromTop])
+
+  const AnimatedStack = animated(Stack)
+
   return (
     <StyledEngineProvider injectFirst>
       <CustomContainer>
@@ -20,7 +51,11 @@ const Favors = () => {
           className={styles['grid-container']}
         >
           <Grid item xs={12} md={6}>
-            <Stack className={styles['content_container']}>
+            <AnimatedStack
+              style={{ ...springs }}
+              className={styles['content_container']}
+              ref={myRef}
+            >
               <Box>
                 <Typography className={styles.title}>
                   ما به سازمان ها چه کمکی می کنیم؟
@@ -66,7 +101,7 @@ const Favors = () => {
                   </li>
                 </ul>
               </Box>
-            </Stack>
+            </AnimatedStack>
           </Grid>
           <Grid xs={12} md item>
             <Box className={styles['man-image-container']}>

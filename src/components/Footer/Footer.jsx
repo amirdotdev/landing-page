@@ -56,7 +56,7 @@ const Footer = () => {
                 و فروشگاه سازمانی در حال خدمت رسانی به شرکتها و سازمان های مختلف
                 می باشد. تامین سریع و با کیفیت کالا و خدمات، درکنار تفکر طراحی
                 نوآورانه خدمات، را باید خط مشی کلیدی شرکت توسعه تجارت پایدار
-                نوآفرین دانست.
+                نوآفرین دانست
               </Typography>
             </Grid>
             <Grid item className={links_container} xs={12} sm={6} md>
@@ -79,7 +79,7 @@ const Footer = () => {
               </Typography>
               <Typography className={address}>
                 {' '}
-                آدرس ایمیل : info@digirefahi.com
+                info@digirefahi.com : آدرس ایمیل
               </Typography>
             </Grid>
           </Grid>
