@@ -12,8 +12,6 @@ import heroImage from '../../assets/Hero/hero.png'
 import backgroundCircle from '../../assets/Hero/circle.png'
 
 const Hero = () => {
-  const [scrollTop, setScrollTop] = useState(null)
-
   const [springs, api] = useSpring(() => ({
     from: { opacity: 0, scale: 1.8 },
     config: {
@@ -24,20 +22,14 @@ const Hero = () => {
   }))
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      setScrollTop(document.documentElement.scrollTop)
-      if (scrollTop <= document.documentElement.clientHeight / 2) {
-        api.start({
-          to: { opacity: 1, scale: 1 },
-        })
-      }
+    api.start({
+      to: { opacity: 1, scale: 1 },
     })
 
     return () => {
       window.removeEventListener('scroll', () => console.log('removing event'))
-      // api.stop()
     }
-  }, [api, scrollTop])
+  }, [api])
 
   return (
     <StyledEngineProvider injectFirst>
